@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
   <script async src="https://cdn.ampproject.org/v0.js"></script>
   <style amp4email-boilerplate>
     body {
@@ -15,11 +16,81 @@
       padding: 0;
       box-sizing: border-box;
     }
+
+    .body {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      color: #212121;
+      background-color: #f5f5f5;
+    }
+
+    .body__container {
+      max-width: 600px;
+      margin: auto;
+      background-color: #ffffff;
+    }
+
+    .menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 60px;
+      padding: 16px;
+      font-family: Arial, sans-serif;
+      background-color: #3a3a3b;
+    }
+
+    .menu__list {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      line-height: 20px;
+      list-style: none;
+    }
+
+    .menu__link {
+      text-decoration: none;
+      color: #ffffff;
+    }
   </style>
 </head>
 
-<body>
-  <p> Место для контента письма</p>
+<body class="body">
+  <div class="body__container">
+    <section class="menu">
+      <a href="https://www.sima-land.ru/" target="_blank">
+        <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/template/design2020/gold21.png" width="113"
+          height="45" alt="логотип" layout="fixed">
+        </amp-img>
+      </a>
+      <div class="menu__list">
+        <div>
+          <a class="menu__link" href="https://www.sima-land.ru/offer/" target="_blank">
+            Акции
+          </a>
+        </div>
+        <div>
+          <a class="menu__link" href="https://www.sima-land.ru/sale/knigi" target="_blank">
+            Скидки
+          </a>
+        </div>
+        <div>
+          <a class="menu__link" href="https://www.sima-land.ru/hit/knigi" target="_blank">
+            Хиты продаж
+          </a>
+        </div>
+        <div>
+          <a class="menu__link" href="https://www.sima-land.ru/new/knigi" target="_blank">
+            Новинки
+          </a>
+        </div>
+      </div>
+    </section>
+    <p> Место для контента письма</p>
+  </div>
 </body>
 
 </html>
