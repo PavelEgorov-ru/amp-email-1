@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script async src="https://cdn.ampproject.org/v0.js"></script>
   <style amp4email-boilerplate>
     body {
@@ -54,13 +54,28 @@
     .menu__link {
       text-decoration: none;
       color: #ffffff;
+      position: absolute;
+    }
+
+    .content-fill {
+      position: relative;
+      width: 400px;
+      height: 500px;
+    }
+
+    .content-responsive {
+      max-width: 50%;
+    }
+
+    .text-fill {
+      position: relative;
     }
   </style>
 </head>
 
 <body class="body">
   <div class="body__container">
-    <section class="menu">
+    <div class="menu">
       <a href="https://www.sima-land.ru/" target="_blank">
         <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/template/design2020/gold21.png" width="113"
           height="45" alt="логотип" layout="fixed">
@@ -83,13 +98,47 @@
           </a>
         </div>
         <div>
-          <a class="menu__link" href="https://www.sima-land.ru/new/knigi" target="_blank">
+          <a class="menu__link" href="https://www.sima-land.ru/new/knigi" target="_blank" style="font-size: 12px">
             Новинки
           </a>
         </div>
       </div>
-    </section>
-    <p> Место для контента письма</p>
+    </div>
+    <div>
+      <p>Демонстрация <b>layout = "fill"</b> </p>
+    </div>
+    <div class="content-fill">
+      <amp-img class="banner-fill" src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032743-1/0000.png"
+        layout="fill" alt="Новогодний набор БУКВА-ЛЕНД"></amp-img>
+      <p class="text-fill">amp-img занял размеры первого родителя, у кого указано свойтсво position </p>
+      <p class="text-fill">Т.к у текста еще не указано свойсвто position, он не будет виден </p>
+    </div>
+    <div>
+      <amp-img class="banner-fixed" src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032743-1/0000.png"
+        layout="fixed" width="600" height="200" alt="Новогодний набор БУКВА-ЛЕНД"></amp-img>
+    </div>
+    <div>
+      <p>Демонстрация <b>layout = "fixed-height"</b> </p>
+    </div>
+    <div>
+      <amp-img class="banner-fixed-height"
+        src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032743-1/0000.png" layout="fixed-height"
+        width="auto" height="200" alt="Новогодний набор БУКВА-ЛЕНД"></amp-img>
+    </div>
+    <div>
+      <p>Демонстрация <b>layout = "intrinsic"</b> </p>
+    </div>
+    <div>
+      <amp-img class="banner-intrinsic" src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032743-1/0000.png"
+        layout="intrinsic" width="450" height="200" alt="Новогодний набор БУКВА-ЛЕНД"></amp-img>
+    </div>
+    <div>
+      <p>Демонстрация <b>layout = "content-responsive"</b> </p>
+    </div>
+    <div class="content-responsive">
+      <amp-img class="banner-responsive" src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032743-1/0000.png"
+        layout="responsive" width="1200" height="600" alt="Новогодний набор БУКВА-ЛЕНД"></amp-img>
+    </div>
   </div>
 </body>
 
