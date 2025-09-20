@@ -1,0 +1,95 @@
+<!doctype html>
+<html ⚡4email data-css-strict lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+  <style amp4email-boilerplate>
+    body {
+      visibility: hidden
+    }
+  </style>
+  <style amp-custom>
+    body {
+      font-family: sans-serif;
+      padding: 16px;
+      background-color: #f4f4f4;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    #card-is-flex-container {
+      width: 320px;
+      margin: 10px;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+
+    #amp-img-needs-flex-item {
+      flex-shrink: 0;
+      flex-grow: 0;
+      flex-basis: 180px;
+    }
+
+    .text-content {
+      flex-grow: 1;
+      padding: 16px;
+      font-size: 14px;
+    }
+
+    .text-content h3 {
+      font-size: 16px;
+      margin: 0 0 4px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Окончательно правильный пример для `layout="flex-item"`</h2>
+
+  <amp-carousel type="carousel" layout="fixed-height" height="300" width="auto">
+
+    <div id="card-is-flex-container">
+
+      <!-- 
+        ИСПРАВЛЕНО: Добавлены обязательные атрибуты width и height.
+        Они задают ПРОПОРЦИИ изображения.
+      -->
+      <amp-img id="amp-img-needs-flex-item"
+        src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032743-1/0000-1.png" width="auto" height="auto"
+        layout="flex-item" alt="Логотип">
+      </amp-img>
+
+      <div class="text-content">
+        <h3>Наш Партнер</h3>
+        <p>Надежная компания с отличной репутацией.</p>
+      </div>
+
+    </div>
+
+    <div id="card-is-flex-container" style="background:#FFFDE7;">
+      <!-- ИСПРАВЛЕНО: Добавлены обязательные атрибуты width и height. -->
+      <amp-img id="amp-img-needs-flex-item"
+        src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032743-1/0000-1.png" width="100" height="100"
+        layout="flex-item" alt="Логотип">
+      </amp-img>
+      <div class="text-content">
+        <h3>Другой Партнер</h3>
+        <p>Тоже хорошая компания.</p>
+      </div>
+    </div>
+
+  </amp-carousel>
+
+</body>
+
+</html>
